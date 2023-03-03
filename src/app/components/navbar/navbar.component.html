@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <article class="brand-logo">
+    <a class="marvel-text"> MARVEL </a>
+  </article>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li>
+        <input [(ngModel)]="searchWord" placeholder="Type to search.." class="form-control bg-dark" type="text" name="" id="" />
+      </li>
+      <li>
+        <button class="btn btn-dark" (click)="search()">Search</button>
+      </li>
+      <!--      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Models</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Payments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Contact</a>
+      </li> -->
+    </ul>
+  </div>
+</nav>

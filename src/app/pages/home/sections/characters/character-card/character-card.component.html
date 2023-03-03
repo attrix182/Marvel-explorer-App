@@ -1,0 +1,6 @@
+<article (mousemove)="mouseMove($event)" (mouseout)="mouseLeave()" [id]="character.id" class="character-card">
+  <div [style]="getImage()" class="image"></div>
+  <div class="character-name">
+    <h3>{{ character.name }}</h3>
+  </div>
+</article>

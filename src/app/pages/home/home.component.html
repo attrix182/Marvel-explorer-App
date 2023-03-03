@@ -1,0 +1,12 @@
+<app-sidebar (category)="handleCategory($event)"></app-sidebar>
+
+
+
+
+<section id="content">
+  <section [ngSwitch]="category">
+    <app-characters *ngSwitchCase="'Characters'"></app-characters>
+
+  </section>
+
+</section>

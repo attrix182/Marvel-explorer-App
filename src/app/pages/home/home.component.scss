@@ -1,0 +1,16 @@
+#content {
+  width: calc(100vw - 250px);
+  height: calc(100% - 65px);
+  margin-left: 250px;
+  position: absolute;
+  top: 65px;
+  background: rgb(33, 37, 37);
+  background: linear-gradient(180deg, rgba(33, 37, 37, 1) 0%, rgba(32, 39, 45, 1) 49%, rgba(20, 27, 34, 1) 100%);
+}
+
+@media (max-width: 990px) {
+  #content {
+    top: 65px;
+    height: calc(100% - 65px);
+  }
+}

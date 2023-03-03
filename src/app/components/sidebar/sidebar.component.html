@@ -1,0 +1,12 @@
+<nav>
+  <div class="side-title">
+    <h1>Categories</h1>
+  </div>
+
+  <div class="side-items" *ngFor="let category of categories">
+    <article [class.active]="selected == category.name" (click)="selectCategory(category.name)" class="side-item">
+      <div class="category-icon" [style]="category.icon"></div>
+      <label class="category-name">{{ category.name }}</label>
+    </article>
+  </div>
+</nav>
