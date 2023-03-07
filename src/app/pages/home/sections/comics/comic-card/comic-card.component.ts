@@ -1,21 +1,21 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-character-card',
-  templateUrl: './character-card.component.html',
-  styleUrls: ['./character-card.component.scss']
+  selector: 'app-comic-card',
+  templateUrl: './comic-card.component.html',
+  styleUrls: ['./comic-card.component.scss']
 })
-export class CharacterCardComponent {
-  @Input() character: any;
+export class ComicCardComponent {
+  @Input() comic: any;
 
   ngOnInit(){  }
 
   getImage(){
-    return 'background-image: url(' + this.character.thumbnail.path +'.'+ this.character.thumbnail.extension + ')';
+    return 'background-image: url(' + this.comic.thumbnail.path +'.'+ this.comic.thumbnail.extension + ')';
   }
 
   mouseMove(event: any){
-    let card = document.getElementById(this.character.id) as HTMLElement;
+    let card = document.getElementById(this.comic.id) as HTMLElement;
     let height = card.clientHeight;
     let width = card.clientWidth;
     const {layerX, layerY} = event;
@@ -27,7 +27,7 @@ export class CharacterCardComponent {
     perspective(500px)
     scale(1.07)
     rotateX(${xRotation}deg)
-    rotateY(${-yRotation}deg)
+    rotateY(${yRotation}deg)
     `;
 
     card.style.transform = interactiveStyle;
@@ -35,7 +35,7 @@ export class CharacterCardComponent {
 
 
   mouseLeave(){
-    let card = document.getElementById(this.character.id) as HTMLElement;
+    let card = document.getElementById(this.comic.id) as HTMLElement;
     card.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
   }
 }

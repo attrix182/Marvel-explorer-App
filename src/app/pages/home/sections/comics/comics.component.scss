@@ -1,4 +1,4 @@
-.characters-container {
+.comics-container {
   display: flex;
   flex-wrap: wrap;
   margin-left: 20px;
@@ -35,12 +35,5 @@
     margin-right: 84px;
     font-family: 'marvel';
     color: #fe6868;
-  }
-}
-
-@media (max-width: 993px) {
-  .characters-container {
-    justify-content: center;
-    margin-left: 0px;
   }
 }

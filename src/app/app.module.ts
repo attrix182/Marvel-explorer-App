@@ -12,6 +12,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { CharacterCardComponent } from './pages/home/sections/characters/character-card/character-card.component';
 import { CharactersComponent } from './pages/home/sections/characters/characters.component';
 import { FormsModule } from '@angular/forms';
+import { ComicsComponent } from './pages/home/sections/comics/comics.component';
+import { ComicCardComponent } from './pages/home/sections/comics/comic-card/comic-card.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,8 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     CharacterCardComponent,
     CharactersComponent,
+    ComicsComponent,
+    ComicCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    FormsModule
+    FormsModule,
+    NgxSkeletonLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,6 @@
-<section class="characters-container" >
+<section class="comics-container" >
 
-  <section *ngIf="loading" >
+  <section *ngIf="loading">
     <ngx-skeleton-loader
     count="20"
     appearance="line"
@@ -10,14 +10,14 @@
   </section>
 
 
-  <section *ngIf="!loading && characters.length === 0">
+  <section *ngIf="!loading && comics.length === 0">
     <div class="no-results-container">
       <div class="no-results-image"></div>
       <h2 class="no-results-text">No characters found</h2>
     </div>
   </section>
 
-  <div *ngFor="let character of characters">
-    <app-character-card [character]="character"></app-character-card>
+  <div *ngFor="let comic of comics">
+    <app-comic-card [comic]="comic"></app-comic-card>
   </div>
 </section>

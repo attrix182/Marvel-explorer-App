@@ -63,3 +63,9 @@ nav {
   .active{
     box-shadow: 0 0 20px var(--dark-red);
   }
+
+  @media (max-width: 993px) {
+    nav {
+      display: none;
+    }
+  }

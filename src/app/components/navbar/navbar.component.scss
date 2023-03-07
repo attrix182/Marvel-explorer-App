@@ -2,6 +2,7 @@ nav {
   background-color: var(--dark-gray) !important;
   height: 65px;
 
+
   ul{
     li{
       width: 100%;
@@ -73,4 +74,87 @@ nav {
 
 .brand-logo:active {
   filter:grayscale(85%);
+}
+
+
+
+
+.side-items{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.side-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .category-icon {
+    display: flex;
+    justify-content: flex-start;
+
+    width: 82px;
+    height: 65px;
+    background-size: cover;
+    border-radius: 500px;
+  }
+
+  .category-name {
+    display: flex;
+    justify-content: flex-start;
+    color: whitesmoke;
+    width: 100%;
+    font-size: 1.2em;
+    font-family: 'comic sans ms'
+  }
+
+  gap: 20px;
+  z-index: 1;
+  padding: 15px;
+  width: 220px;
+  background-color: var(--gray-primary);
+}
+
+
+  .side-item:hover{
+    box-shadow: 0 0 20px var(--dark-red);
+    scale: 1.01;
+  }
+
+  .active{
+    box-shadow: 0 0 20px var(--dark-red);
+  }
+
+
+  @media (min-width: 993px) {
+    .filters {
+    display:none;
+    }
+  }
+
+
+@media (max-width: 993px) {
+  .searcher {
+  display:none;
+  }
+
+
+  #navbarNav{
+    z-index: 10;
+    background: var(--dark-gray);
+    padding: 10px;
+  }
+
+  input{
+    width: 80vw !important;
+  }
+  .search-li{
+    padding: 20px !important;
+    margin: auto;
+  }
 }

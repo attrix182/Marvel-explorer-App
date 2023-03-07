@@ -1,0 +1,6 @@
+<article (mousemove)="mouseMove($event)" (mouseout)="mouseLeave()" [id]="comic.id" class="comic-card">
+  <div [style]="getImage()" class="image"></div>
+  <div class="comic-title">
+    <h3>{{ comic.title | slice:0:22 }}</h3>
+  </div>
+</article>

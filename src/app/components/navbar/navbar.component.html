@@ -16,24 +16,30 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li>
-        <input [(ngModel)]="searchWord" placeholder="Type to search.." class="form-control bg-dark" type="text" name="" id="" />
-      </li>
-      <li>
-        <button class="btn btn-dark" (click)="search()">Search</button>
-      </li>
-      <!--      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Models</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Payments</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">Contact</a>
-      </li> -->
+
+        <li>
+          <input
+            (keydown.enter)="search()"
+            [(ngModel)]="searchWord"
+            placeholder="Type to search.."
+            class="form-control bg-dark"
+            type="text"
+            name=""
+            id=""
+          />
+        </li>
+        <li class="search-li">
+          <button class=" serach-btn btn btn-dark" (click)="search()">Search</button>
+        </li>
+      <div class="filters">
+        <div class="side-items" *ngFor="let category of categories">
+          <li [class.active]="selected == category.name" (click)="selectCategory(category.name)" class="side-item">
+            <div class="category-icon" [style]="category.icon"></div>
+            <label class="category-name">{{ category.name }}</label>
+          </li>
+        </div>
+      </div>
+
     </ul>
   </div>
 </nav>
